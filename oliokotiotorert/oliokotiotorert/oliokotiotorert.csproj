@@ -44,9 +44,13 @@
   <ItemGroup>
     <Compile Include="circle.cs" />
     <Compile Include="Date.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="invoiceItem.cs" />
     <Compile Include="programmi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheAccount.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="SimpleCircle.cs" />
     <Compile Include="timma.cs" />
   </ItemGroup>
   <ItemGroup>

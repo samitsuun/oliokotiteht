@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace oliokotiotorert
 {
-    class TheAccount
+   public class Account
     {
         private string id;
         private string name;
-        private int balance = 0;
+        private int Balance = 0;
 
-        public TheAccount(string id, string name)
+        public Account()
         {
-            id = SamSok;
-            name = Sami Sokura;
+            id = "ID";
+            name = "Name";
         }
 
-        public TheAccount(string _id, string _name, int _balance)
+        public void  _Account(string _id, string _name, int _Balance)
         {
             id = _id;
             name = _name;
-            balance = _balance;
+            Balance = _Balance;
         }
 
         public string getId()
@@ -37,39 +37,48 @@ namespace oliokotiotorert
 
         public int getBalance()
         {
-            return balance;
+            return Balance;
+        }
+
+        public void setBalance(int newBalance)
+        {
+            Balance = newBalance;
         }
 
         public int credit(int Amount)
         {
-            balance = Amount + balance;
-            return balance;
+            return Amount + Balance;
         }
 
         public int debit(int Amount)
         {
-            if (Amount <= balance)
+            if (Amount <= Balance)
             {
-                balance = balance - Amount;
+                Balance = Balance - Amount;
             }
             else
             {
                 Console.WriteLine("Amount exceeded balance");
             }
-            return balance;
+            return Balance;
         }
 
-        public int transferTo(TheAccount another, int Amount)
+        public int transferTo(Account another, int Amount)
         {
-            if (Amount <= balance)
+            if (Amount <= Balance)
             {
-                
+                another.Balance += Amount;
             }
             else
             {
                 Console.WriteLine("Amount exceeded balance");
             }
-            return balance;
+            return another.Balance;
+        }
+
+        public string toString()
+        {
+            return "Account[id: " + id + ", name: " + name + ", balance: " + Balance;
         }
     }
 }
